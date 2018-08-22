@@ -2,10 +2,10 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-      joinTo: 'js/app.js'
+      joinTo: 'assets/js/app.js'
     },
     stylesheets: {
-      joinTo: 'css/app.css'
+      joinTo: 'assets/css/app.css'
     }
   },
 
@@ -19,9 +19,9 @@ exports.config = {
   // Phoenix paths configuration
   paths: {
     // Dependencies and current project directories to watch
-    watched: ['source/assets/static', 'source/assets/css', 'source/assets/js', 'source/assets/vendor'],
+    watched: ['source/assets/static', 'source/assets/css', 'source/assets/js', 'source/assets/vendor', 'source/templates'],
     // Where to compile files to
-    public: './build/assets'
+    public: './build'
   },
 
   // Configure your plugins
@@ -34,6 +34,15 @@ exports.config = {
       options: {
         includePaths: ['node_modules/materialize-css/sass']
       }
+    },
+    htmlPages: {
+      destination (path) {
+        return path.replace('source/templates/', '')
+      },
+      compileAssets: false,
+      preserveFrontMatter: false,
+      removeFrontMatter: true,
+      forceRemoveFrontMatter: true
     }
   },
 
