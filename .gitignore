@@ -1,2 +1,4 @@
-.env
+.env.init
+.env.dev
 node_modules
+yarn-error.log
