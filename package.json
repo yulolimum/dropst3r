@@ -18,12 +18,10 @@
     "dotenv": "^6.0.0",
     "html-pages-brunch": "^2.7.0",
     "http-server": "^0.11.1",
+    "jquery": "^3.3.1",
     "materialize-css": "^1.0.0-rc.2",
     "replace-in-file": "^3.4.2",
     "sass-brunch": "^2.10.4",
     "uglify-js-brunch": "^2.10.0"
-  },
-  "dependencies": {
-    "jquery": "^3.3.1"
   }
 }

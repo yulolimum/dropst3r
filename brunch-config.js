@@ -2,7 +2,12 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-      joinTo: 'assets/js/app.js'
+      joinTo: {
+        'assets/js/app.js': /\.js$/,
+      },
+      order: {
+        before: [/jquery/, /materialize/]
+      }
     },
     stylesheets: {
       joinTo: 'assets/css/app.css'
@@ -18,7 +23,7 @@ exports.config = {
 
   paths: {
     // Dependencies and current project directories to watch
-    watched: ['source/assets/static', 'source/assets/css', 'source/assets/js', 'source/assets/vendor', 'source/templates'],
+    watched: ['source/assets', 'source/templates'],
     // Where to compile files to
     public: './build'
   },
@@ -27,7 +32,7 @@ exports.config = {
   plugins: {
     babel: {
       // Do not use ES6 compiler in vendor code
-      ignore: [/vendor/]
+      ignore: [/external/]
     },
     sass: {
       options: {
@@ -71,22 +76,21 @@ exports.config = {
     ],
     copycat: {
       'assets/static': ['./source/assets/static'],
+      '../source/assets/external': [
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/materialize-css/dist/js/materialize.min.js'
+      ],
       verbose: false,
-      onlyChanged: false
+      onlyChanged: true
     }
   },
 
   modules: {
-    autoRequire: {
-      'js/app.js': ['js/app']
-    }
+    wrapper: false,
+    definition: false
   },
 
   npm: {
-    enabled: true,
-    globals: {
-      'jQuery': 'jquery',
-      '$': 'jquery'
-    }
+    enabled: false,
   }
 }

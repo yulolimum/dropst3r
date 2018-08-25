@@ -1,23 +1,46 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
     <!--META_TITLE--><!--META_TITLE-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <style>
+      :root {
+        --html-background-color: /**HTML_BACKGROUND_COLOR**//**HTML_BACKGROUND_COLOR**/;
+        --navigation-background-color: /**NAVIGATION_BACKGROUND_COLOR**//**NAVIGATION_BACKGROUND_COLOR**/;
+        --tooltips-background-color: /**TOOLTIPS_BACKGROUND_COLOR**//**TOOLTIPS_BACKGROUND_COLOR**/;
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
   </head>
 
   <body>
     <header class="main">
-      <nav>
-        <div class="nav-wrapper">
-          <span class="brand-logo center"><!--NAVIGATION_LOGO--><!--NAVIGATION_LOGO--></span>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a target="_blank" rel="nofollow,noreferrer" href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http://infinite.red&title=Infinite+Red"><i class="zocial-icons facebook"></i></a></li>
-            <li><a target="_blank" rel="nofollow,noreferrer" href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http://infinite.red&title=Infinite+Red"><i class="zocial-icons twitter"></i></a></li>
-            <li><a target="_blank" rel="nofollow,noreferrer" href="http://api.addthis.com/oexchange/0.8/forward/slack/offer?url=http://infinite.red&title=Infinite+Red"><i class="zocial-icons slack"></i></a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <span class="brand-logo center"><!--NAVIGATION_LOGO--><!--NAVIGATION_LOGO--></span>
+            <ul class="left hide-on-med-and-down">
+              <li>
+                <a target="_blank" rel="nofollow,noreferrer" href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http://infinite.red&title=Infinite+Red" data-position="bottom" data-tooltip="Share on Facebook">
+                  <i class="zocial-icons facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" rel="nofollow,noreferrer" href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http://infinite.red&title=Infinite+Red" data-tooltip="Share on Twitter">
+                  <i class="zocial-icons twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" rel="nofollow,noreferrer" href="http://api.addthis.com/oexchange/0.8/forward/slack/offer?url=http://infinite.red&title=Infinite+Red" data-tooltip="Share on Slack">
+                  <i class="zocial-icons slack"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main role="main">
@@ -26,12 +49,7 @@
     <footer>
     </footer>
 
-    <style>
-      :root {
-        --html-background-color: /**HTML_BACKGROUND_COLOR**//**HTML_BACKGROUND_COLOR**/;
-        --navigation-background-color: /**NAVIGATION_BACKGROUND_COLOR**//**NAVIGATION_BACKGROUND_COLOR**/;
-      }
-    </style>
 
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
