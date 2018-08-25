@@ -5,7 +5,9 @@ if (process.env.NODE_ENV !== undefined) {
 }
 
 const replaceWithEnvVar = function (replacementMatch) {
-  const envVarMatch = /^<!--([A-Z\_]*)-->/.exec(replacementMatch)
+  const htmlVarMatch = /^<!--([A-Z\_]*)-->/.exec(replacementMatch)
+  const cssVarMatch = /^\/\*\*([A-Z\_]*?)\*\*\//.exec(replacementMatch)
+  const envVarMatch = htmlVarMatch || cssVarMatch
   const envVarTag = envVarMatch[0]
   const envVarKey = envVarMatch[1]
   return `${envVarTag}${process.env[envVarKey]}${envVarTag}`
@@ -13,6 +15,6 @@ const replaceWithEnvVar = function (replacementMatch) {
 
 module.exports = {
   files: './build/*.html',
-  from: /<!--[A-Z\_]*?-->.*?<!--[A-Z\_]*?-->/g,
+  from: [/<!--[A-Z\_]*?-->.*?<!--[A-Z\_]*?-->/g, /\/\*\*[A-Z\_]*?\*\*\/.*?\/\*\*[A-Z\_]*?\*\*\//g],
   to: (match) => replaceWithEnvVar(match)
 }
