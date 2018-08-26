@@ -36,15 +36,16 @@
 
     new ClipboardJS(els.copyToClipboardLink, {
       text: function (trigger) {
-        const $icon = $(trigger).find('i.material-icons')
-        const iconText = $icon.text()
-
-        M.toast({html: 'Copied!', displayLength: 4000})
-        $icon.text('check')
-        setTimeout(function () { $icon.text(iconText) }, 4000)
-
         return $(trigger).data('url')
       }
+    }).on('success', function (e) {
+      const $icon = $(e.trigger).find('i.material-icons')
+      const iconText = $icon.data('icon')
+
+      M.toast({html: 'Copied!', displayLength: 4000})
+      $icon.text('check')
+      clearTimeout(window.copyToClipboardLinkTimeout)
+      window.copyToClipboardLinkTimeout = setTimeout(function () { $icon.text(iconText) }, 4000)
     })
   }
 

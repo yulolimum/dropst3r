@@ -21,7 +21,8 @@ var _get=function t(e,i,n){null===e&&(e=Function.prototype);var s=Object.getOwnP
     $footer: $('footer.main'),
     $embedOptionsTrigger: $('footer.main .embed-options #embed-options-trigger'),
     $embedOptions: $('footer.main .embed-options .tap-target'),
-    $embedOptionsFields: $('footer.main .embed-options .input-field')
+    $embedOptionsFields: $('footer.main .embed-options .input-field'),
+    embedOptionsFields: 'footer.main .embed-options .input-field'
   };
 
   if (!els.$footer.length) return;
@@ -52,6 +53,27 @@ var _get=function t(e,i,n){null===e&&(e=Function.prototype);var s=Object.getOwnP
 
   var initEmbedOptionsCopyToClipboard = function initEmbedOptionsCopyToClipboard() {
     if (!els.$embedOptionsFields.length) return;
+
+    new ClipboardJS(els.embedOptionsFields, {
+      target: function target(trigger) {
+        return $(trigger).find('input')[0];
+      }
+    }).on('success', function (e) {
+      var $option = $(e.trigger);
+      var $icon = $option.find('i.prefix');
+      var $label = $option.find('label');
+      var labelText = $label.text();
+      var iconText = $icon.data('icon');
+
+      $icon.text('check');
+      M.toast({ html: 'Copied ' + labelText + ' embed code!', displayLength: 4000 });
+      clearTimeout(window['embedIconTimeoutFor' + labelText]);
+      window['embedIconTimeoutFor' + labelText] = setTimeout(function () {
+        $icon.text(iconText);
+      }, 4000);
+
+      e.clearSelection();
+    });
   };
 
   initEmbedOptionsPopout();
@@ -100,17 +122,18 @@ var _get=function t(e,i,n){null===e&&(e=Function.prototype);var s=Object.getOwnP
 
     new ClipboardJS(els.copyToClipboardLink, {
       text: function text(trigger) {
-        var $icon = $(trigger).find('i.material-icons');
-        var iconText = $icon.text();
-
-        M.toast({ html: 'Copied!', displayLength: 4000 });
-        $icon.text('check');
-        setTimeout(function () {
-          $icon.text(iconText);
-        }, 4000);
-
         return $(trigger).data('url');
       }
+    }).on('success', function (e) {
+      var $icon = $(e.trigger).find('i.material-icons');
+      var iconText = $icon.data('icon');
+
+      M.toast({ html: 'Copied!', displayLength: 4000 });
+      $icon.text('check');
+      clearTimeout(window.copyToClipboardLinkTimeout);
+      window.copyToClipboardLinkTimeout = setTimeout(function () {
+        $icon.text(iconText);
+      }, 4000);
     });
   };
 

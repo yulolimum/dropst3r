@@ -6863,12 +6863,12 @@ footer .embed-options {
   position: fixed; }
   footer .embed-options h5 {
     color: var(--embed-section-heading-color);
-    margin-bottom: 45PX; }
+    margin-bottom: 45px; }
   footer .embed-options .tap-target-wrapper {
-    width: 1000px;
-    height: 1000px; }
+    width: 1200px;
+    height: 1200px; }
   footer .embed-options .tap-target-content {
-    padding-left: 100px !important; }
+    padding-left: 130px !important; }
   footer .embed-options #embed-options-trigger,
   footer .embed-options .tap-target-origin {
     background: var(--embed-trigger-background-color); }
@@ -6877,14 +6877,19 @@ footer .embed-options {
   footer .embed-options .tap-target-wave::before,
   footer .embed-options .tap-target-wave::after {
     background: var(--embed-trigger-border-color); }
-  footer .embed-options .input-field i.material-icons {
-    color: var(--embed-section-input-color); }
-  footer .embed-options .input-field input[type=text]:not(.browser-default) {
-    border-bottom-color: var(--embed-section-input-color) !important;
-    box-shadow: none !important;
-    color: var(--embed-section-text-color); }
-  footer .embed-options .input-field > label {
-    color: var(--embed-section-input-color) !important; }
+  footer .embed-options .input-field {
+    cursor: pointer; }
+    footer .embed-options .input-field i.material-icons {
+      cursor: pointer;
+      color: var(--embed-section-input-color); }
+    footer .embed-options .input-field input[type=text]:not(.browser-default) {
+      cursor: pointer;
+      border-bottom-color: var(--embed-section-input-color) !important;
+      box-shadow: none !important;
+      color: var(--embed-section-text-color); }
+    footer .embed-options .input-field > label {
+      cursor: pointer;
+      color: var(--embed-section-input-color) !important; }
 
 
 /*# sourceMappingURL=app.css.map*/
