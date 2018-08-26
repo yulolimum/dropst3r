@@ -7,9 +7,9 @@
     socialShareLinks: 'header.main a.social-share'
   }
 
-  const initNavLinksTooltips = function () {
-    if (!els.$header.length) return
+  if (!els.$header.length) return
 
+  const initNavLinksTooltips = function () {
     els.$navLinks.tooltip({
       position: 'bottom',
       enterDelay: 200,
@@ -22,7 +22,10 @@
 
     addthis.share({
       container_selector: els.socialShareContainer,
-      button_selector: els.socialShareLinks
+      button_selector: els.socialShareLinks,
+      close: function (shareProps) {
+        M.toast({html: `Shared to ${shareProps.service}!`, displayLength: 4000})
+      }
     })
   }
 
@@ -36,8 +39,9 @@
         const $icon = $(trigger).find('i.material-icons')
         const iconText = $icon.text()
 
+        M.toast({html: 'Copied!', displayLength: 4000})
         $icon.text('check')
-        setTimeout(function () { $icon.text(iconText) }, 2500)
+        setTimeout(function () { $icon.text(iconText) }, 4000)
 
         return $(trigger).data('url')
       }

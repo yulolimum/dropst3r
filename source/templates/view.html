@@ -6,9 +6,19 @@
 
     <style>
       :root {
-        --html-background-color: /**HTML_BACKGROUND_COLOR**//**HTML_BACKGROUND_COLOR**/;
-        --navigation-background-color: /**NAVIGATION_BACKGROUND_COLOR**//**NAVIGATION_BACKGROUND_COLOR**/;
-        --tooltips-background-color: /**TOOLTIPS_BACKGROUND_COLOR**//**TOOLTIPS_BACKGROUND_COLOR**/;
+        --html-background-color:          /**HTML_BACKGROUND_COLOR**//**HTML_BACKGROUND_COLOR**/;
+        --global-text-color:              /**GLOBAL_TEXT_COLOR**//**GLOBAL_TEXT_COLOR**/;
+        --navigation-background-color:    /**NAVIGATION_BACKGROUND_COLOR**//**NAVIGATION_BACKGROUND_COLOR**/;
+        --tooltips-background-color:      /**TOOLTIPS_BACKGROUND_COLOR**//**TOOLTIPS_BACKGROUND_COLOR**/;
+        --toasts-background-color:        /**TOASTS_BACKGROUND_COLOR**//**TOASTS_BACKGROUND_COLOR**/;
+        --embed-trigger-background-color: /**EMBED_TRIGGER_BACKGROUND_COLOR**//**EMBED_TRIGGER_BACKGROUND_COLOR**/;
+        --embed-trigger-border-color:     /**EMBED_TRIGGER_BORDER_COLOR**//**EMBED_TRIGGER_BORDER_COLOR**/;
+        --embed-section-background-color: /**EMBED_SECTION_BACKGROUND_COLOR**//**EMBED_SECTION_BACKGROUND_COLOR**/;
+        --embed-section-input-color:      /**EMBED_SECTION_INPUT_COLOR**//**EMBED_SECTION_INPUT_COLOR**/;
+        --embed-section-text-color:       /**EMBED_SECTION_TEXT_COLOR**//**EMBED_SECTION_TEXT_COLOR**/;
+        --embed-section-heading-color:    /**EMBED_SECTION_HEADING_COLOR**//**EMBED_SECTION_HEADING_COLOR**/;
+        --embed-tooltip-background-color: /**EMBED_TOOLTIP_BACKGROUND_COLOR**//**EMBED_TOOLTIP_BACKGROUND_COLOR**/;
+        --embed-tooltip-text-color:       /**EMBED_TOOLTIP_TEXT_COLOR**//**EMBED_TOOLTIP_TEXT_COLOR**/;
       }
     </style>
 
@@ -22,13 +32,14 @@
           <div class="nav-wrapper">
             <span class="brand-logo center"><!--NAVIGATION_LOGO--><!--NAVIGATION_LOGO--></span>
             <ul class="left hide-on-med-and-down social-share-container">
-              <li><a href="#" class="social-share" data-service="facebook" data-title="Infinite Red" data-url="http://infinite.red" data-position="bottom" data-tooltip="Share on Facebook"><i class="zocial-icons facebook"></i></a></li>
-              <li><a href="#" class="social-share" data-service="twitter" data-title="Infinite Red" data-url="http://infinite.red" data-position="bottom" data-tooltip="Share on Twitter"><i class="zocial-icons twitter"></i></a></li>
-              <li><a href="#" class="social-share" data-service="slack" data-title="Infinite Red" data-url="http://infinite.red" data-position="bottom" data-tooltip="Share on Slack"><i class="zocial-icons slack"></i></a></li>
+              <li><a href="#" class="social-share" data-service="facebook" data-title="Infinite Red" data-url="http://infinite.red" data-tooltip="Share on Facebook"><i class="zocial-icons facebook"></i></a></li>
+              <li><a href="#" class="social-share" data-service="twitter" data-title="Infinite Red" data-url="http://infinite.red" data-tooltip="Share on Twitter"><i class="zocial-icons twitter"></i></a></li>
+              <li><a href="#" class="social-share" data-service="slack" data-title="Infinite Red" data-url="http://infinite.red" data-tooltip="Share on Slack"><i class="zocial-icons slack"></i></a></li>
             </ul>
 
             <ul class="right hide-on-med-and-down">
-              <li><a href="#" class="copy-to-clipboard" data-url="http://infinite.red" data-position="bottom" data-tooltip="Copy Link"><i class="material-icons">file_copy</i></a></li>
+              <li><a href="#" data-tooltip="Download File" download><i class="material-icons">save_alt</i></a></li>
+              <li><a href="#" class="copy-to-clipboard" data-url="http://infinite.red" data-tooltip="Copy Link"><i class="material-icons">file_copy</i></a></li>
             </ul>
           </div>
         </nav>
@@ -38,7 +49,31 @@
     <main role="main">
     </main>
 
-    <footer>
+    <footer class="main">
+      <div class="embed-options">
+        <a id="embed-options-trigger" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">code</i></a>
+
+        <div class="tap-target" data-target="embed-options-trigger">
+          <div class="tap-target-content">
+            <h5 class="right-align">Embed Options</h5>
+
+            <div class="input-field" data-tooltip="Copy HTML">
+              <i class="material-icons prefix">code</i>
+              <input id="embed-html" type="text" class="validate" value='<img src="{--FILE_URL--}" />'><label for="embed-html">HTML</label>
+            </div>
+
+            <div class="input-field" data-tooltip="Copy BBCode">
+              <i class="material-icons prefix">forum</i>
+              <input id="embed-bbcode" type="text" class="validate" value="[img]{--FILE_URL--}[/img]"><label for="embed-bbcode">BBCode</label>
+            </div>
+
+            <div class="input-field" data-tooltip="Copy Markdown">
+              <i class="material-icons prefix">view_headline</i>
+              <input id="embed-markdown" type="text" class="validate" value="![]({--FILE_URL--})"><label for="embed-markdown">Markdown</label>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b80afee8bf22147"></script>
