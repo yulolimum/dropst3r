@@ -1,5 +1,6 @@
 (function () {
   const els = {
+    $preview: $('#preview'),
     $header: $('header.main'),
     $navLinks: $('header.main nav [data-tooltip]'),
     copyToClipboardLink: 'header.main a.copy-to-clipboard',
@@ -49,7 +50,9 @@
     })
   }
 
-  initNavLinksTooltips()
-  initSocialSharing()
-  initCopyLinkToClipboard()
+  els.$preview.on('config.ready', () => {
+    initNavLinksTooltips()
+    initSocialSharing()
+    initCopyLinkToClipboard()
+  })
 })()

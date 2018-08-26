@@ -1,5 +1,6 @@
 (function () {
   const els = {
+    $preview: $('#preview'),
     $footer: $('footer.main'),
     $embedOptionsTrigger: $('footer.main .embed-options #embed-options-trigger'),
     $embedOptions: $('footer.main .embed-options .tap-target'),
@@ -56,7 +57,9 @@
     })
   }
 
-  initEmbedOptionsPopout()
-  initEmbedOptionsTooltips()
-  initEmbedOptionsCopyToClipboard()
+  els.$preview.on('config.ready', () => {
+    initEmbedOptionsPopout()
+    initEmbedOptionsTooltips()
+    initEmbedOptionsCopyToClipboard()
+  })
 })()

@@ -6,7 +6,8 @@ config = {
         'assets/js/app.js': /\.js$/,
       },
       order: {
-        before: [/jquery/, /materialize/]
+        before: [/jquery.min/, /deparam/, /mime/, /materialize/],
+        after: [/config/]
       }
     },
     stylesheets: {

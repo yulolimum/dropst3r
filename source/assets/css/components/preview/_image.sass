@@ -4,7 +4,21 @@
   justify-content: center
   align-items:     center
 
-  .image-preview
-    width:      100%
-    max-width:  1024px
-    max-height: 780px
+  .image-viewer
+    width:           100%
+    max-width:       1024px
+    max-height:      780px
+    min-width:       55px
+    min-height:      55px
+    display:         flex
+    justify-content: center
+    align-items:     center
+    position:        relative
+    z-index:         2
+
+    a
+      cursor: zoom-in
+
+    img
+      display:   block
+      max-width: 100%
