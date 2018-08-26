@@ -78,7 +78,8 @@ exports.config = {
       'assets/static': ['./source/assets/static'],
       '../source/assets/external': [
         'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/materialize-css/dist/js/materialize.min.js'
+        'node_modules/materialize-css/dist/js/materialize.min.js',
+        'node_modules/clipboard/dist/clipboard.min.js'
       ],
       verbose: false,
       onlyChanged: true
