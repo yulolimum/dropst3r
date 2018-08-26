@@ -1,4 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang=en><head><!--META_TITLE--><title>Welcome :: Dropst3r</title><!--META_TITLE--><meta content="text/html; charset=utf-8" http-equiv=content-type><style>:root {
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <!--META_TITLE--><title>Welcome :: Yulian's Files</title><!--META_TITLE-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <style>
+      :root {
         --html-background-color:          /**HTML_BACKGROUND_COLOR**/#1D1D3A/**HTML_BACKGROUND_COLOR**/;
         --global-text-color:              /**GLOBAL_TEXT_COLOR**/#FFFFFF/**GLOBAL_TEXT_COLOR**/;
         --navigation-background-color:    /**NAVIGATION_BACKGROUND_COLOR**/#070325/**NAVIGATION_BACKGROUND_COLOR**/;
@@ -13,8 +20,90 @@
         --embed-tooltip-background-color: /**EMBED_TOOLTIP_BACKGROUND_COLOR**/#D7463F/**EMBED_TOOLTIP_BACKGROUND_COLOR**/;
         --embed-tooltip-text-color:       /**EMBED_TOOLTIP_TEXT_COLOR**/#FFFFFF/**EMBED_TOOLTIP_TEXT_COLOR**/;
         --loading-spinner-color:          /**LOADING_SPINNER_COLOR**/#D7463F/**LOADING_SPINNER_COLOR**/;
-      }</style><script>window.dropst3r = {
-        websiteHostname: /***WEBSITE_HOSTNAME***/'http://BUCKET-NAME.s3-website-us-west-2.amazonaws.com'/***WEBSITE_HOSTNAME***/,
-        bucketHostname:  /***BUCKET_HOSTNAME_AND_BUCKET_NAME***/'https://s3-us-west-2.amazonaws.com/BUCKET-NAME'/***BUCKET_HOSTNAME_AND_BUCKET_NAME***/,
+      }
+    </style>
+
+    <script>
+      window.dropst3r = {
+        websiteHostname: /***WEBSITE_HOSTNAME***/'http://localhost:4567'/***WEBSITE_HOSTNAME***/,
+        bucketHostname:  /***BUCKET_HOSTNAME_AND_BUCKET_NAME***/'http://localhost:4567'/***BUCKET_HOSTNAME_AND_BUCKET_NAME***/,
         filesDirectory:  /***FILES_DIRECTORY***/'uploads/'/***FILES_DIRECTORY***/
-      }</script><link href=./assets/css/app.css rel=stylesheet></head><body><header class=main><div class=navbar-fixed><nav><div class=nav-wrapper><span class="brand-logo center"><!--NAVIGATION_LOGO-->DROPST3R <span>THEME</span><!--NAVIGATION_LOGO--></span><ul class="hide-on-med-and-down left social-share-container"><li><a class=social-share data-tooltip="Share on Facebook" data-url={--DIRECT_URL--} href=# data-service=facebook data-title="Infinite Red"><i class="zocial-icons facebook"></i></a></li><li><a class=social-share data-tooltip="Share on Twitter" data-url={--DIRECT_URL--} href=# data-service=twitter data-title="Infinite Red"><i class="zocial-icons twitter"></i></a></li><li><a class=social-share data-tooltip="Share on Slack" data-url={--DIRECT_URL--} href=# data-service=slack data-title="Infinite Red"><i class="zocial-icons slack"></i></a></li></ul><ul class="hide-on-med-and-down right"><li><a data-tooltip="Download File" href=# download><i class=material-icons>save_alt</i></a></li><li><a class=copy-to-clipboard data-tooltip="Copy Link" data-url={--VIEWER_LINK--} href=#><i class=material-icons data-icon=file_copy>file_copy</i></a></li></ul></div></nav></div></header><main role=main><div id=preview><div class="active preloader-wrapper"><div class=spinner-layer><div class="circle-clipper left"><div class=circle></div></div><div class=gap-patch><div class=circle></div></div><div class="circle-clipper right"><div class=circle></div></div></div></div></div></main><footer class=main><div class=embed-options><a class="btn btn-floating waves-effect waves-light" id=embed-options-trigger><i class=material-icons>code</i></a><div class=tap-target data-target=embed-options-trigger><div class=tap-target-content><h5 class=right-align>Embed Options</h5><div class=input-field data-tooltip="Copy HTML"><i class="material-icons prefix" data-icon=code>code</i> <input id=embed-html type=text value='<img src="{--DIRECT_URL--}" />'><label for=embed-html>HTML</label></div><div class=input-field data-tooltip="Copy BBCode"><i class="material-icons prefix" data-icon=forum>forum</i> <input id=embed-bbcode type=text value=[img]{--DIRECT_URL--}[/img]><label for=embed-bbcode>BBCode</label></div><div class=input-field data-tooltip="Copy Markdown"><i class="material-icons prefix" data-icon=view_headline>view_headline</i> <input id=embed-markdown type=text value=![]({--DIRECT_URL--})><label for=embed-markdown>Markdown</label></div><div class=input-field data-tooltip="Copy Direct Link"><i class="material-icons prefix" data-icon=link>link</i> <input id=embed-direct-link type=text value={--DIRECT_URL--}><label for=embed-direct-link>Direct Link</label></div></div></div></div></footer><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b80afee8bf22147"></script><script src=./assets/js/app.js></script></body></html>
+      }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
+  </head>
+
+  <body>
+    <header class="main">
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <span class="brand-logo center"><!--NAVIGATION_LOGO--><span>YULIAN'S</span>FILES<!--NAVIGATION_LOGO--></span>
+            <ul class="left hide-on-med-and-down social-share-container">
+              <li><a href="#" class="social-share" data-service="facebook" data-title="Infinite Red" data-url="{--DIRECT_URL--}" data-tooltip="Share on Facebook"><i class="zocial-icons facebook"></i></a></li>
+              <li><a href="#" class="social-share" data-service="twitter" data-title="Infinite Red" data-url="{--DIRECT_URL--}" data-tooltip="Share on Twitter"><i class="zocial-icons twitter"></i></a></li>
+              <li><a href="#" class="social-share" data-service="slack" data-title="Infinite Red" data-url="{--DIRECT_URL--}" data-tooltip="Share on Slack"><i class="zocial-icons slack"></i></a></li>
+            </ul>
+
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#" data-tooltip="Download File" download><i class="material-icons">save_alt</i></a></li>
+              <li><a href="#" class="copy-to-clipboard" data-url="{--VIEWER_LINK--}" data-tooltip="Copy Link"><i class="material-icons" data-icon="file_copy">file_copy</i></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main">
+      <div id="preview">
+        <div class="preloader-wrapper active">
+          <div class="spinner-layer">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main">
+      <div class="embed-options">
+        <a id="embed-options-trigger" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">code</i></a>
+
+        <div class="tap-target" data-target="embed-options-trigger">
+          <div class="tap-target-content">
+            <h5 class="right-align">Embed Options</h5>
+
+            <div class="input-field" data-tooltip="Copy HTML">
+              <i class="material-icons prefix" data-icon="code">code</i>
+              <input id="embed-html" type="text" value='<img src="{--DIRECT_URL--}" />'><label for="embed-html">HTML</label>
+            </div>
+
+            <div class="input-field" data-tooltip="Copy BBCode">
+              <i class="material-icons prefix" data-icon="forum">forum</i>
+              <input id="embed-bbcode" type="text" value="[img]{--DIRECT_URL--}[/img]"><label for="embed-bbcode">BBCode</label>
+            </div>
+
+            <div class="input-field" data-tooltip="Copy Markdown">
+              <i class="material-icons prefix" data-icon="view_headline">view_headline</i>
+              <input id="embed-markdown" type="text" value="![]({--DIRECT_URL--})"><label for="embed-markdown">Markdown</label>
+            </div>
+
+            <div class="input-field" data-tooltip="Copy Direct Link">
+              <i class="material-icons prefix" data-icon="link">link</i>
+              <input id="embed-direct-link" type="text" value="{--DIRECT_URL--}"><label for="embed-direct-link">Direct Link</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b80afee8bf22147"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

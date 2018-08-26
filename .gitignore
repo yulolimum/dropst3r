@@ -1,5 +1,7 @@
 .env.init
 .env.dev
+.env.prod
+.env.deploy
 node_modules
 yarn-error.log
 .DS_Store
