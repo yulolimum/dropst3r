@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "brunch build --production",
+    "build": "rm -rf ./build/*; brunch build --production",
     "dev": "concurrently --kill-others \"http-server ./build -p 4567 -s --cors -c-1\" \"brunch watch --stdin\"",
     "set-env": "replace-in-file --configFile ./env.js"
   },

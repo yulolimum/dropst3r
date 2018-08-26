@@ -1,4 +1,4 @@
-exports.config = {
+config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
@@ -95,3 +95,9 @@ exports.config = {
     enabled: false,
   }
 }
+
+if (process.env.NODE_ENV === 'development') {
+  config.plugins.copycat['/uploads'] = ['./source/uploads']
+}
+
+exports.config = config
