@@ -3,7 +3,7 @@ config = {
   files: {
     javascripts: {
       joinTo: {
-        'assets/js/app.js': /\.js$/,
+        'assets/js/app.js': /\.js$/
       },
       order: {
         before: [/jquery.min/, /deparam/, /mime/, /materialize/],
@@ -76,6 +76,7 @@ config = {
       'yarn run set-env'
     ],
     copycat: {
+      '../source/assets/static': ['node_modules/plyr/dist/plyr.svg'],
       'assets/static': ['./source/assets/static'],
       '../source/assets/external': [
         'node_modules/jquery/dist/jquery.min.js',
@@ -94,7 +95,7 @@ config = {
   },
 
   npm: {
-    enabled: false,
+    enabled: false
   }
 }
 

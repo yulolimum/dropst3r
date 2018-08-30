@@ -36,7 +36,9 @@
       </div>
     `)
     const $video = els.$preview.find('video')
-    new Plyr($video[0])
+    new Plyr($video[0], {
+      iconUrl: '/assets/static/plyr.svg'
+    })
   }
 
   const initGenericViewer = function () {
