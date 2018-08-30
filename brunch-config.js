@@ -37,7 +37,7 @@ config = {
     },
     sass: {
       options: {
-        includePaths: ['node_modules/materialize-css/sass']
+        includePaths: ['node_modules/materialize-css/sass', 'node_modules/plyr/src/sass']
       }
     },
     htmlPages: {
@@ -80,7 +80,8 @@ config = {
       '../source/assets/external': [
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/materialize-css/dist/js/materialize.min.js',
-        'node_modules/clipboard/dist/clipboard.min.js'
+        'node_modules/clipboard/dist/clipboard.min.js',
+        'node_modules/plyr/dist/plyr.polyfilled.min.js'
       ],
       verbose: false,
       onlyChanged: true

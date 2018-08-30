@@ -1,0 +1,42 @@
+#preview
+  .video-viewer
+    width:      1024px
+    min-width:  55px
+    min-height: 55px
+    max-width:  100%
+    position:   relative
+    z-index:    2
+    background: var(--html-background-color)
+
+    &:before
+      content:        ""
+      display:        block
+      width:          100%
+      padding-bottom: 56%
+
+    .responsive-video-wrapper
+      position: absolute
+      top:      0
+      left:     0
+      height:   100%
+      width:    100%
+
+    button:focus
+      background: none
+
+    .plyr__control
+      &.plyr__tab-focus,
+      &:hover,
+      &[aria-expanded='true'],
+      &[role='menuitemradio'][aria-checked='true']::before
+        background: var(--video-player-controls-color)
+
+      &.plyr__tab-focus
+        box-shadow: 0 0 0 5px rgba(white, 0.3)
+
+    .plyr--full-ui
+      input[type='range']
+        color: var(--video-player-controls-color)
+
+    .plyr__control--overlaid
+      background: var(--video-player-controls-color)
