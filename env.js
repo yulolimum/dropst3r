@@ -17,7 +17,7 @@ const replaceWithEnvVar = function (replacementMatch) {
 }
 
 module.exports = {
-  files: './build/*.html',
+  files: ['./build/*.html', './build/assets/static/placeholder.*.svg'],
   from: [/<!--[A-Z\_]*?-->.*?<!--[A-Z\_]*?-->/g, /\/\*\*[A-Z\_]*?\*\*\/.*?\/\*\*[A-Z\_]*?\*\*\//g, /\/\*\*\*[A-Z\_]*?\*\*\*\/.*?\/\*\*\*[A-Z\_]*?\*\*\*\//g],
   to: (match) => replaceWithEnvVar(match)
 }

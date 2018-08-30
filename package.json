@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rm -rf ./build/*; brunch build --production",
     "dev": "concurrently --kill-others \"http-server ./build -p 4567 -s --cors -c-1\" \"brunch watch --stdin\"",
-    "set-env": "replace-in-file --configFile ./env.js"
+    "set-env": "replace-in-file --configFile ./env.js; convert-svg-to-jpeg build/assets/static/placeholder.*.svg"
   },
   "devDependencies": {
     "after-brunch": "^0.0.5",
@@ -14,6 +14,7 @@
     "brunch": "^2.10.16",
     "clean-css-brunch": "^2.10.0",
     "concurrently": "^4.0.0",
+    "convert-svg-to-jpeg": "^0.4.0",
     "copycat-brunch": "^1.1.0",
     "dotenv": "^6.0.0",
     "html-pages-brunch": "^2.7.0",

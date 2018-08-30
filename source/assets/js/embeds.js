@@ -26,9 +26,9 @@
   }
 
   const initVideoEmbed = function () {
-    els.$htmlEmbed.val(`<a href="{--VIEWER_URL--}" target="_blank"><img src="{--WEBSITE_URL--}/assets/static/placeholder.video.jpg" /></a>`)
-    els.$bbcodeEmbed.val(`[url={--VIEWER_URL--}][img]{--WEBSITE_URL--}/assets/static/placeholder.video.jpg[/img][/url]`)
-    els.$markdownEmbed.val(`[![]({--WEBSITE_URL--}/assets/static/placeholder.video.jpg)]({--VIEWER_URL--})`)
+    els.$htmlEmbed.val(`<a href="{--VIEWER_URL--}" target="_blank"><img src="{--WEBSITE_URL--}/assets/static/placeholder.video.jpeg" /></a>`)
+    els.$bbcodeEmbed.val(`[url={--VIEWER_URL--}][img]{--WEBSITE_URL--}/assets/static/placeholder.video.jpeg[/img][/url]`)
+    els.$markdownEmbed.val(`[![]({--WEBSITE_URL--}/assets/static/placeholder.video.jpeg)]({--VIEWER_URL--})`)
   }
 
   const initGenericEmbed = function () {
