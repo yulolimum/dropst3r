@@ -33,9 +33,11 @@
       str = directUrlSwap(str)
     } else if (str.includes('{--VIEWER_URL--}')) {
       str = viewerUrlSwap(str)
+    } else if (str.includes('{--WEBSITE_URL--}')) {
+      str = websiteUrlSwap(str)
     }
 
-    return str
+    return str.match(/\{--[A-Z\_]*?--\}/) ? swapUrl(str) : str
   }
 
   const directUrlSwap = function (str) {
@@ -44,6 +46,10 @@
 
   const viewerUrlSwap = function (str) {
     return str.replace('{--VIEWER_URL--}', config.viewerFileUrl)
+  }
+
+  const websiteUrlSwap = function (str) {
+    return str.replace('{--WEBSITE_URL--}', config.websiteHostname)
   }
 
   els.$preview.on('config.ready', initUrlReplacement)

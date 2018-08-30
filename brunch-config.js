@@ -7,7 +7,7 @@ config = {
       },
       order: {
         before: [/jquery.min/, /deparam/, /mime/, /materialize/],
-        after: [/config/]
+        after: [/urls/, /config/]
       }
     },
     stylesheets: {

@@ -1,30 +1,50 @@
-(function(){
+(function () {
   const config = window.dropst3r
 
   let params = window.location.search.split('?')[1]
-      params = $.deparam(params)
+  params = $.deparam(params)
 
   const fileName = params.file
   const fileType = mimelite.getType(params.file)
 
+  config.websiteHostname = config.websiteHostname.match(/\/$/) ? config.websiteHostname.slice(0, -1) : config.websiteHostname
+  config.bucketHostname = config.bucketHostname.match(/\/$/) ? config.bucketHostname.slice(0, -1) : config.bucketHostname
+
   config.directFileUrl = `
     ${config.bucketHostname}
-    ${config.bucketHostname.match(/\/$/) ? '' : '/'}
+    /
     ${config.filesDirectory.match(/^\//) ? config.filesDirectory.substring(1) : config.filesDirectory}
     ${config.filesDirectory.match(/\/$/) ? '' : '/'}
     ${fileName}
-  `.replace(/\s/g,'')
+  `.replace(/\s/g, '')
 
   config.viewerFileUrl = `
     ${config.websiteHostname}
-    ${config.websiteHostname.match(/\/$/) ? '' : '/'}
+    /
     ${config.filesDirectory.match(/^\//) ? config.filesDirectory.substring(1) : config.filesDirectory}
     ${config.filesDirectory.match(/\/$/) ? '' : '/'}
     ${fileName}
-  `.replace(/\s/g,'')
+  `.replace(/\s/g, '')
 
   config.fileName = fileName
   config.fileType = fileType
+
+  config.viewers = {
+    'image/jpeg': 'initImage',
+    'image/png': 'initImage',
+    'image/gif': 'initImage',
+    'image/svg+xml': 'initImage',
+    'image/tiff': 'initImage',
+    'image/webp': 'initImage',
+    'image/bmp': 'initImage',
+    'image/apng': 'initImage',
+    'video/mp4': 'initVideo',
+    'video/h264': 'initVideo',
+    'video/mpeg': 'initVideo',
+    'video/ogg': 'initVideo',
+    'video/quicktime': 'initVideo',
+    'video/webm': 'initVideo'
+  }
 
   $('#preview').trigger('config.ready')
 })()

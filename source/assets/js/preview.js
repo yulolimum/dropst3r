@@ -9,7 +9,7 @@
 
   const initFilePreview = function () {
     try {
-      viewers[config.fileType]()
+      eval(`${config.viewers[config.fileType]}Viewer()`)
     } catch (e) {
       initGenericViewer()
     }
@@ -41,23 +41,6 @@
 
   const initGenericViewer = function () {
     alert('viewer for non-images is not setup yet')
-  }
-
-  const viewers = {
-    'image/jpeg': initImageViewer,
-    'image/png': initImageViewer,
-    'image/gif': initImageViewer,
-    'image/svg+xml': initImageViewer,
-    'image/tiff': initImageViewer,
-    'image/webp': initImageViewer,
-    'image/bmp': initImageViewer,
-    'image/apng': initImageViewer,
-    'video/mp4': initVideoViewer,
-    'video/h264': initVideoViewer,
-    'video/mpeg': initVideoViewer,
-    'video/ogg': initVideoViewer,
-    'video/quicktime': initVideoViewer,
-    'video/webm': initVideoViewer
   }
 
   els.$preview.on('config.ready', initFilePreview)
