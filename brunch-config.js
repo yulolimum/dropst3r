@@ -76,8 +76,7 @@ config = {
       'yarn run set-env'
     ],
     copycat: {
-      '../source/assets/static': ['node_modules/plyr/dist/plyr.svg'],
-      'assets/static': ['./source/assets/static'],
+      'assets/static': ['./source/assets/static', 'node_modules/plyr/dist/plyr.svg'],
       '../source/assets/external': [
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/materialize-css/dist/js/materialize.min.js',
