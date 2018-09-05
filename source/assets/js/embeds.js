@@ -13,7 +13,7 @@
 
   const initEmbedBuilder = function () {
     try {
-      eval(`${config.viewers[config.fileType]}Embed()`)
+      eval(`${config.viewers[(config.fileType || config.fileExtension)]}Embed()`)
     } catch (e) {
       initGenericEmbed()
     }
@@ -31,8 +31,14 @@
     els.$markdownEmbed.val(`[![]({--WEBSITE_URL--}/assets/static/placeholder.video.jpeg)]({--VIEWER_URL--})`)
   }
 
+  const initGoogleEmbed = function () {
+    els.$htmlEmbed.val(`<a href="{--VIEWER_URL--}" target="_blank"><img src="{--WEBSITE_URL--}/assets/static/placeholder.attachment.jpeg" /></a>`)
+    els.$bbcodeEmbed.val(`[url={--VIEWER_URL--}][img]{--WEBSITE_URL--}/assets/static/placeholder.attachment.jpeg[/img][/url]`)
+    els.$markdownEmbed.val(`[![]({--WEBSITE_URL--}/assets/static/placeholder.attachment.jpeg)]({--VIEWER_URL--})`)
+  }
+
   const initGenericEmbed = function () {
-    alert('embeds for non-images is not setup yet')
+    // alert('embeds for non-images is not setup yet')
   }
 
   els.$preview.on('config.ready', initEmbedBuilder)

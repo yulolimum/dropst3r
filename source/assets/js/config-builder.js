@@ -6,6 +6,7 @@
 
   const fileName = params.file
   const fileType = mimelite.getType(params.file)
+  const fileExtension = params.file.split('.').pop().toLowerCase()
 
   config.websiteHostname = config.websiteHostname.match(/\/$/) ? config.websiteHostname.slice(0, -1) : config.websiteHostname
   config.bucketHostname = config.bucketHostname.match(/\/$/) ? config.bucketHostname.slice(0, -1) : config.bucketHostname
@@ -28,6 +29,7 @@
 
   config.fileName = fileName
   config.fileType = fileType
+  config.fileExtension = fileExtension
 
   config.viewers = {
     'image/jpeg': 'initImage',
@@ -38,12 +40,25 @@
     'image/webp': 'initImage',
     'image/bmp': 'initImage',
     'image/apng': 'initImage',
+
     'video/mp4': 'initVideo',
     'video/h264': 'initVideo',
     'video/mpeg': 'initVideo',
     'video/ogg': 'initVideo',
     'video/quicktime': 'initVideo',
-    'video/webm': 'initVideo'
+    'video/webm': 'initVideo',
+    'video/3gpp': 'initVideo',
+    'video/3gpp2': 'initVideo',
+    'avi': 'initVideo',
+    'wmv': 'initVideo',
+
+    'application/msword': 'initGoogle',
+    'docx': 'initGoogle',
+    'application/pdf': 'initGoogle',
+    'xls': 'initGoogle',
+    'xlsx': 'initGoogle',
+    'ppt': 'initGoogle',
+    'pptx': 'initGoogle',
   }
 
   $('#preview').trigger('config.ready')

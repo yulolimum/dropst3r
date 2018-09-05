@@ -9,7 +9,7 @@
 
   const initFilePreview = function () {
     try {
-      eval(`${config.viewers[config.fileType]}Viewer()`)
+      eval(`${config.viewers[(config.fileType || config.fileExtension)]}Viewer()`)
     } catch (e) {
       initGenericViewer()
     }
@@ -39,6 +39,14 @@
     new Plyr($video[0], {
       iconUrl: '/assets/static/plyr.svg'
     })
+  }
+
+  const initGoogleViewer = function () {
+    els.$preview.append(`
+      <div class="google-viewer">
+        <iframe src="http://docs.google.com/gview?url=${config.directFileUrl}&embedded=true"></iframe>
+      </div>
+    `)
   }
 
   const initGenericViewer = function () {
