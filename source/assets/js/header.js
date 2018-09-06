@@ -28,6 +28,7 @@
         M.toast({html: `Shared to ${shareProps.service}!`, displayLength: 4000})
       },
       url_transforms: {
+        clean: true,
         shorten: {
           twitter: 'bitly',
           facebook: 'bitly',
