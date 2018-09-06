@@ -43,6 +43,12 @@
     els.$markdownEmbed.val(`[![]({--WEBSITE_URL--}/assets/static/placeholder.archive.jpeg)]({--VIEWER_URL--})`)
   }
 
+  const initAudioEmbed = function () {
+    els.$htmlEmbed.val(`<a href="{--VIEWER_URL--}" target="_blank"><img src="{--WEBSITE_URL--}/assets/static/placeholder.audio.jpeg" /></a>`)
+    els.$bbcodeEmbed.val(`[url={--VIEWER_URL--}][img]{--WEBSITE_URL--}/assets/static/placeholder.audio.jpeg[/img][/url]`)
+    els.$markdownEmbed.val(`[![]({--WEBSITE_URL--}/assets/static/placeholder.audio.jpeg)]({--VIEWER_URL--})`)
+  }
+
   const initGenericEmbed = function () {
     // alert('embeds for non-images is not setup yet')
   }

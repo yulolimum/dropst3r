@@ -1,0 +1,13 @@
+
+<svg width="480px" height="270px" viewBox="0 0 480 270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Placeholders" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Audio">
+            <rect id="Rectangle" fill="/**PLACEHOLDER_IMAGE_BACKGROUND_COLOR**//**PLACEHOLDER_IMAGE_BACKGROUND_COLOR**/" x="0" y="0" width="480" height="270"></rect>
+            <path d="M234,150 L253,135.5 L234,121 L234,150 Z M240.5,103 C222.56,103 208,117.56 208,135.5 C208,153.44 222.56,168 240.5,168 C258.44,168 273,153.44 273,135.5 C273,117.56 258.44,103 240.5,103 Z M240,161 C225.6675,161 214,149.3325 214,135 C214,120.6675 225.6675,109 240,109 C254.3325,109 266,120.6675 266,135 C266,149.3325 254.3325,161 240,161 Z" id="Play" fill="/**PLACEHOLDER_IMAGE_CTA_COLOR**//**PLACEHOLDER_IMAGE_CTA_COLOR**/" fill-rule="nonzero"></path>
+            <path d="M49.0769231,162 L49.0769231,207.368889 C46.7992308,206.537778 44.3761538,206 41.8076923,206 C29.7407692,206 20,215.826667 20,228 C20,240.173333 29.7407692,250 41.8076923,250 C53.0023077,250 62.1615385,241.444444 63.3730769,230.444444 L63.6153846,230.444444 L63.6153846,176.666667 L83,176.666667 L83,162 L49.0769231,162 Z" id="Shape" fill="/**PLACEHOLDER_IMAGE_FILE_TYPE_COLOR**//**PLACEHOLDER_IMAGE_FILE_TYPE_COLOR**/" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

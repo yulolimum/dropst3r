@@ -1,6 +1,6 @@
 #preview
-  .video-viewer
-    width:      1024px
+  .audio-viewer
+    width:      640px
     min-width:  55px
     min-height: 55px
     max-width:  100%
@@ -8,27 +8,16 @@
     z-index:    2
     background: var(--html-background-color)
 
-    &:before
-      content:        ""
-      display:        block
-      width:          100%
-      padding-bottom: 56%
-
-    .responsive-video-wrapper
-      @extend .z-depth-3
-      position: absolute
-      top:      0
-      left:     0
-      height:   100%
-      width:    100%
-
     button:focus
       background: none
 
-    .plyr--video,
-    .plyr__video-wrapper,
-    video
-      height: 100%
+    .plyr--audio,
+    .plyr__audio-wrapper,
+    audio
+      height: 55px
+
+    .plyr__controls
+      @extend .z-depth-3
 
     .plyr__control
       &.plyr__tab-focus,

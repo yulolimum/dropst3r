@@ -61,6 +61,20 @@
     `)
   }
 
+  const initAudioViewer = function () {
+    els.$preview.append(`
+      <div class="audio-viewer">
+        <audio controls>
+          <source src="${config.directFileUrl}" type="${config.fileType}">
+        </audio>
+      </div>
+    `)
+    const $audio = els.$preview.find('audio')
+    new Plyr($audio[0], {
+      iconUrl: '/assets/static/plyr.svg'
+    })
+  }
+
   const initGenericViewer = function () {
     alert('viewer for non-images is not setup yet')
   }

@@ -65,6 +65,13 @@
     'rar': 'initArchive',
     'tar': 'initArchive',
     '7z': 'initArchive',
+
+    'audio/mp3': 'initAudio',
+    'audio/mp4': 'initAudio',
+    'audio/mpeg': 'initAudio',
+    'audio/ogg': 'initAudio',
+    'audio/wav': 'initAudio',
+    'audio/webm': 'initAudio'
   }
 
   $('#preview').trigger('config.ready')
