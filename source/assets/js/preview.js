@@ -1,11 +1,25 @@
 (function () {
   const els = {
-    $preview: $('#preview')
+    $preview: $('#preview'),
+    downloadButton: 'div a button'
   }
 
   if (!els.$preview.length) return
 
   const config = window.dropst3r
+
+  const initDownloadTooltip = function () {
+    els.$preview.find(els.downloadButton).tooltip({
+      position: 'top',
+      enterDelay: 0,
+      exitDelay: 50
+    })
+
+    els.$preview.find(els.downloadButton).each(function () {
+      const tooltipInstance = M.Tooltip.getInstance($(this))
+      $(tooltipInstance.tooltipEl).addClass('preview-download-tooltip')
+    })
+  }
 
   const initFilePreview = function () {
     try {
@@ -76,7 +90,15 @@
   }
 
   const initGenericViewer = function () {
-    alert('viewer for non-images is not setup yet')
+    els.$preview.append(`
+      <div class="generic-viewer">
+        <a href="${config.directFileUrl}" download>
+          <i class="material-icons">attachment</i>
+          <button class="btn-floating btn-large pulse"><i class="material-icons right">save_alt</i></button>
+          <span>${config.fileName}</span>
+        </a>
+      </div>
+    `)
   }
 
   els.$preview.on('config.ready', initFilePreview)

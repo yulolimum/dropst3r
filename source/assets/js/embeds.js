@@ -50,7 +50,9 @@
   }
 
   const initGenericEmbed = function () {
-    // alert('embeds for non-images is not setup yet')
+    els.$htmlEmbed.val(`<a href="{--VIEWER_URL--}" target="_blank"><img src="{--WEBSITE_URL--}/assets/static/placeholder.generic.jpeg" /></a>`)
+    els.$bbcodeEmbed.val(`[url={--VIEWER_URL--}][img]{--WEBSITE_URL--}/assets/static/placeholder.generic.jpeg[/img][/url]`)
+    els.$markdownEmbed.val(`[![]({--WEBSITE_URL--}/assets/static/placeholder.generic.jpeg)]({--VIEWER_URL--})`)
   }
 
   els.$preview.on('config.ready', initEmbedBuilder)

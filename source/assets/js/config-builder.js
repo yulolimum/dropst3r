@@ -71,7 +71,9 @@
     'audio/mpeg': 'initAudio',
     'audio/ogg': 'initAudio',
     'audio/wav': 'initAudio',
-    'audio/webm': 'initAudio'
+    'audio/webm': 'initAudio',
+
+    _: 'initGeneric'
   }
 
   $('#preview').trigger('config.ready')
