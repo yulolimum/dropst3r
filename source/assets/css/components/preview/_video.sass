@@ -6,7 +6,8 @@
     max-width:  100%
     position:   relative
     z-index:    2
-    background: var(--html-background-color)
+    background: $kon
+    background: var(--html-background-color, $kon)
 
     &:before
       content:        ""
@@ -35,14 +36,17 @@
       &:hover,
       &[aria-expanded='true'],
       &[role='menuitemradio'][aria-checked='true']::before
-        background: var(--video-player-controls-color)
+        background: $dangerously_red
+        background: var(--video-player-controls-color, $dangerously_red)
 
       &.plyr__tab-focus
         box-shadow: 0 0 0 5px rgba(white, 0.3)
 
     .plyr--full-ui
       input[type='range']
-        color: var(--video-player-controls-color)
+        color: $dangerously_red
+        color: var(--video-player-controls-color, $dangerously_red)
 
     .plyr__control--overlaid
-      background: var(--video-player-controls-color)
+      background: $dangerously_red
+      background: var(--video-player-controls-color, $dangerously_red)

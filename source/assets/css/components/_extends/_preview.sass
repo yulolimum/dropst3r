@@ -8,12 +8,14 @@
   flex-direction:  column
   position:        relative
   z-index:         2
-  background:      var(--html-background-color)
+  background:      $kon
+  background:      var(--html-background-color, $kon)
 
   a
     @extend .z-depth-3
     transition:      transform 300ms ease-in-out
-    background:      var(--preview-download-image-background-color)
+    background:      $midnight
+    background:      var(--preview-download-image-background-color, $midnight)
     width:           100%
     height:          100%
     display:         flex
@@ -34,7 +36,8 @@
       transition:  transform 300ms ease-in-out
       font-size:   80px
       line-height: 1
-      color:       var(--preview-download-icon-color)
+      color:       $dangerously_red
+      color:       var(--preview-download-icon-color, $dangerously_red)
 
     span
       position:    absolute
@@ -44,14 +47,17 @@
       padding:     0 10px
       font-size:   13px
       line-height: 1
-      color:       var(--preview-download-icon-color)
+      color:       $dangerously_red
+      color:       var(--preview-download-icon-color, $dangerously_red)
 
     button
       transition:       transform 300ms ease-in-out
       position:         absolute
       top:              -20px
       right:            -20px
-      background-color: var(--preview-download-button-background-color)
+      background-color: $dangerously_red
+      background-color: var(--preview-download-button-background-color, $dangerously_red)
 
       > i
-        color: var(--preview-download-button-text-color)
+        color: white
+        color: var(--preview-download-button-text-color, white)

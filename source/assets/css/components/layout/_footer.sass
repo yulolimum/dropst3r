@@ -1,4 +1,19 @@
 footer
+  .help-text
+    &:empty,
+    &:blank
+      display: none
+
+    color:       $dangerously_red
+    color:       var(--help-text-color, $dangerously_red)
+    position:    fixed
+    font-size:   12px
+    line-height: 1
+    bottom:      20px
+    left:        0
+    width:       100%
+    text-align:  center
+
   .embed-options
     right:    20px
     bottom:   20px
@@ -6,7 +21,8 @@ footer
     z-index:  10
 
     h5
-      color: var(--embed-section-heading-color)
+      color:         $dangerously_red
+      color:         var(--embed-section-heading-color, $dangerously_red)
       margin-bottom: 45px
 
     .tap-target-wrapper
@@ -18,28 +34,39 @@ footer
 
     #embed-options-trigger,
     .tap-target-origin
-      background: var(--embed-trigger-background-color)
+      background: $dangerously_red
+      background: var(--embed-trigger-background-color, $dangerously_red)
+
+      i
+        color: white
+        color: var(--embed-trigger-icon-color, white)
 
     .tap-target
-      background: var(--embed-section-background-color)
+      background: $midnight
+      background: var(--embed-section-background-color, $midnight)
 
     .tap-target-wave::before,
     .tap-target-wave::after
-      background: var(--embed-trigger-border-color)
+      background: $kon
+      background: var(--embed-trigger-border-color, $kon)
 
     .input-field
       cursor: pointer
 
       i.material-icons
         cursor: pointer
-        color:  var(--embed-section-input-color)
+        color:  $dangerously_red
+        color:  var(--embed-section-input-color, $dangerously_red)
 
       input[type=text]:not(.browser-default)
         cursor:              pointer
-        border-bottom-color: var(--embed-section-input-color) !important
+        border-bottom-color: $dangerously_red !important
+        border-bottom-color: var(--embed-section-input-color, $dangerously_red) !important
         box-shadow:          none !important
-        color:               var(--embed-section-text-color)
+        color:               $modest_mauve
+        color:               var(--embed-section-text-color, $modest_mauve)
 
       > label
         cursor: pointer
-        color:  var(--embed-section-input-color) !important
+        color:  $dangerously_red !important
+        color:  var(--embed-section-input-color, $dangerously_red) !important

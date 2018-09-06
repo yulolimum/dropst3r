@@ -3,4 +3,7 @@
   right: 5%
 
   .toast
-    background: var(--toasts-background-color)
+    background: $dangerously_red
+    background: var(--toasts-background-color, $dangerously_red)
+    color:      white
+    color:      var(--toasts-text-color, white)

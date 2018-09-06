@@ -1,16 +1,23 @@
 .material-tooltip
-  background: var(--tooltips-background-color)
+  background: $midnight
+  background: var(--tooltips-background-color, $midnight)
+  color:      white
+  color:      var(--tooltips-text-color, white)
   padding:    10px 12px
 
   .tooltip-content
     white-space: nowrap
 
 .embed-option-tooltip
-  background: var(--embed-tooltip-background-color)
-  color:      var(--embed-tooltip-text-color)
+  background: $dangerously_red
+  background: var(--embed-tooltip-background-color, $dangerously_red)
+  color:      white
+  color:      var(--embed-tooltip-text-color, white)
   margin-top: -5px
 
 .preview-download-tooltip
-  background: var(--preview-download-button-background-color)
-  color:      var(--preview-download-button-text-color)
+  background: $dangerously_red
+  background: var(--preview-download-button-background-color, $dangerously_red)
+  color:      white
+  color:      var(--preview-download-button-text-color, white)
   margin-top: -15px
