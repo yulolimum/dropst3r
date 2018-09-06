@@ -49,6 +49,18 @@
     `)
   }
 
+  const initArchiveViewer = function () {
+    els.$preview.append(`
+      <div class="archive-viewer">
+        <a href="${config.directFileUrl}" download>
+          <i class="material-icons">archive</i>
+          <button class="btn-floating btn-large pulse"><i class="material-icons right">save_alt</i></button>
+          <span>${config.fileName}</span>
+        </a>
+      </div>
+    `)
+  }
+
   const initGenericViewer = function () {
     alert('viewer for non-images is not setup yet')
   }

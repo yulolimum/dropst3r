@@ -59,6 +59,12 @@
     'xlsx': 'initGoogle',
     'ppt': 'initGoogle',
     'pptx': 'initGoogle',
+
+    'application/gzip': 'initArchive',
+    'application/zip': 'initArchive',
+    'rar': 'initArchive',
+    'tar': 'initArchive',
+    '7z': 'initArchive',
   }
 
   $('#preview').trigger('config.ready')
