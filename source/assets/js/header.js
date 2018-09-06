@@ -26,6 +26,16 @@
       button_selector: els.socialShareLinks,
       close: function (shareProps) {
         M.toast({html: `Shared to ${shareProps.service}!`, displayLength: 4000})
+      },
+      url_transforms: {
+        shorten: {
+          twitter: 'bitly',
+          facebook: 'bitly',
+          slack: 'bitly'
+        }
+      },
+      shorteners: {
+        bitly: {}
       }
     })
   }
