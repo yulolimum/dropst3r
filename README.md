@@ -6,7 +6,7 @@ Do you want to embed a video into your Github pull request or bulletin board pos
 
 Do you want to share a nsfw meme with your colleague two cubicles down but your Slack and Dropbox are being tracked?
 
-__Dropst3r is the solution you have been waiting for! It is a customizable theme to be used with Amazon S3 (and optionally Monosnap) to nicely wrap your media/files and present them in a profressional manner. __
+__Dropst3r is the solution you have been waiting for! It is a customizable theme to be used with Amazon S3 (and optionally Monosnap) to nicely wrap your media/files and present them in a profressional manner.__
 
 ---
 
